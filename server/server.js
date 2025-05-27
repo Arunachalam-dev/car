@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-let port = 2010;
+let port =  process.env.PORT || 2010;
 let dbconnection = require('./db');
 const cors = require('cors');
  dotenv = require('dotenv');
@@ -15,13 +15,18 @@ app.use('/api/bookings/',require('./Routers/bookingrouter'));
 app.use('/api/stripe', stripeRoutes);
 app.use('/api/bookings',require('./Routers/bookingrouter'))
 
-const path= require('path')
-if(process.env.NODE_ENV==="production"){
-  app.use('/',express.static('clint/build'))
-  app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'clint/build/index.html'))
-  })
-}
+// const path= require('path')
+// if(process.env.NODE_ENV==="production"){
+//   app.use('/',express.static('clint/build'))
+//   app.get('*',(req,res)=>{
+//     res.sendFile(path.resolve(__dirname,'clint/build/index.html'))
+//   })
+// }
+
+process.on('uncaughtException', err => {
+  console.error('Uncaught Exception:', err.stack || err.message);
+});
+
 app.get('/', (req, res) => {
   res.send("hello");
 });
