@@ -1,0 +1,181 @@
+.header-top{
+    padding: 10px 0px;
+    background-color: rgb(138, 43, 226);
+    color: #fff;
+    margin-bottom: 15px;
+
+}
+.header-top-left{
+    display: flex;
+    align-items: center;
+column-gap: 1rem;
+}
+.header-help
+{
+    display: flex;
+    align-items: center;
+    gap :5px;
+}
+.header-help span{
+    font-size: 0.9rem;
+}
+.header-help i{
+    background-color:  rgb(226, 159, 43);
+    color: #fff;
+    border-radius:50px;
+    font-size:.9rem;
+    
+    padding: 6px 6px;
+    
+}
+/* *{
+    align-items:center;
+
+    justify-content: end;
+} */
+
+.header-top-right a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    
+}
+
+.header-top-right a:hover{
+    color: #ffef0f;
+}
+
+/* 
+----------------------------------------------------------------header medil----------------------------------------------------- */
+   .header-mediel{
+    padding: 20px 0px;
+   }   
+.logo h1 a span{
+    font-size: 1.1rem;
+    font-weight: 700;
+     
+}
+.logo h1 a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.logo h1 a i{
+    font-size: 2.2rem;
+   
+}
+.logo h1{
+    line-height: 1.4rem;
+}
+.heade-location{
+    color: blueviolet;
+}
+.heade-location span i{
+    font-size :1.8rem;
+    
+}
+
+.header-location-condect h4{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.header-location-condect h6{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.headet-btn {
+    padding: 10px 20px;
+    background-color: blueviolet;
+    border-radius:10px;
+    font-size: 0.8rem;
+    border: none;
+    outline: none;
+    
+}
+
+.headet-btn a {
+    text-decoration: none;
+    color: #fff;
+    outline:none;
+  
+}
+.headet-btn a:hover{
+    
+    color: #ffef0f;
+}
+
+.headet-btn a{
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+}
+
+/* 
+--------------------------------------------------------mani nava------------------------------------------------- */
+.header-mani{
+    padding: 10px 0px;
+    background-color: blueviolet;
+    color: #fff;
+}
+.mobile-menu{
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.mobile-menu{
+    display: none;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    
+    gap:1.6rem;
+    transition:.3s;
+  
+}
+
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu a:hover{
+    color: #ffef0f;
+}
+
+
+
+.seache{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    /* padding: 4px 5px; */
+    padding: 4px 9px  ;
+    background-color: rgb(36, 5, 66);
+    border-radius: 50px;
+}
+.seache input {
+    background: transparent;
+    font-size: .8rem;
+    color: #fff;
+    cursor: pointer;
+border: none;
+    outline: none;
+   
+}
+
+.seache span i:hover{
+    color: #fff;
+}
+.seache span i{
+    color: #ffffff70;
+    cursor: pointer;
+}
+.seache input::placeholder{
+    font-size: .9rem;
+    color: #ffffff8e;
+    
+}
+

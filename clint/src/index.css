@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif !important;
+  /* font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; */
+ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(156, 231, 231, 0.418); 
+  
+  
+}
+.shopname{
+  color: rgb(212, 94, 16);
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.header{
+box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+h1{
+  font-size:2rem;
+  font-weight:bolder;
+  color: rgba(247, 247, 247, 0.822);
+}
+.header{
+ background-color: rgba(156, 231, 231, 0.418); 
+ 
+  
+}
+
+
+
+.header .ant-btn {
+border: 1px solid orangered !important;
+  border-radius:10px !important;
+  color: rgb(228, 110, 41) !important;
+  background-color: rgba(236, 235, 234, 0.918) !important;
+
+  outline:none!important;
+  padding: 5px 15px!important;
+  box-shadow: none!important;
+
+} 
+
+.header .ant-btn:hover {
+  color: white !important;
+  background-color: blueviolet !important;
+}
+

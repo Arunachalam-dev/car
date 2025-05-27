@@ -1,0 +1,83 @@
+.footer-item{
+    background-color: blueviolet;
+    margin-top:110px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.footer-logo h1 i{
+    color: #fff;
+    font-weight:200;
+}
+.footer-logo h1 span{
+    color: #fff;
+    font-weight: 300;
+}
+
+
+.footer-deatila{
+    margin-top: 15px;
+    font-size: .9rem;
+    color: #ffffff8e;
+    line-height:30px;
+}
+
+.arun{
+    border: none !important;
+  
+    background:transparent !important;
+    transition: 0.5s !important;
+   
+
+}
+.arun a{
+    text-decoration:none !important;
+    color: rgba(250, 247, 247, 0.644) !important;
+}
+.arun a:hover{
+    color: #ffef0f !important;
+
+}
+
+.foote-item-list{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.office-info{
+    color: #ffffff83;
+    font-size: .9rem;
+}
+.secton-description{
+    color: #ffffff83;
+    font-size: .9rem;
+}
+.newsletter{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+padding: 5px 5px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: rgba(66, 7, 122, 0.493);
+    
+}
+
+.newsletter input{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.newsletter input::placeholder{
+    font-size: .9rem;
+    color: #ffffff9d;
+}
+.newsletter span:hover{
+    color: #fff;
+}
+
+.footer-box{
+    border-top:1px solid rgb(0, 0, 0) !important;
+   padding: 10px 0px;
+    
+}
