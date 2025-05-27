@@ -1,10 +1,19 @@
-// POST /api/stripe/pay
+// server/Routers/PaymentIntentroute.js
+
 const express = require('express');
 const router = express.Router();
-require('dotenv').config(); // <-- Load .env variables
+require('dotenv').config(); // Load environment variables from .env
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+// Initialize Stripe with secret key from environment
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
+if (!stripeSecretKey) {
+  throw new Error("STRIPE_SECRET_KEY is not defined in .env file.");
+}
+
+const stripe = require('stripe')(stripeSecretKey);
+
+// POST /api/stripe/pay
 router.post('/pay', async (req, res) => {
   const { amount, payment_method } = req.body;
 
@@ -16,14 +25,14 @@ router.post('/pay', async (req, res) => {
       confirm: true,
       automatic_payment_methods: {
         enabled: true,
-        allow_redirects: 'never'  // prevents return_url requirement
+        allow_redirects: 'never' // prevents return_url requirement
       }
     });
 
     res.json({ success: true, paymentIntent });
   } catch (error) {
     console.error('Payment failed:', error.message);
-    res.json({ success: false, error: error.message });
+    res.status(400).json({ success: false, error: error.message });
   }
 });
 
