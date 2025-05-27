@@ -1,5 +1,6 @@
 let express = require('express');
 let app = express();
+const path = require("path");
 let port =  process.env.PORT || 2010;
 let dbconnection = require('./db');
 const cors = require('cors');
@@ -14,6 +15,11 @@ app.use('/api/users/', require('./Routers/userroute'));
 app.use('/api/bookings/',require('./Routers/bookingrouter'));
 app.use('/api/stripe', stripeRoutes);
 app.use('/api/bookings',require('./Routers/bookingrouter'))
+
+app.use(express.static(path.join(__dirname, "..", "build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+});
 
 // const path= require('path')
 // if(process.env.NODE_ENV==="production"){
