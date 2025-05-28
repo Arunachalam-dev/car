@@ -56,5 +56,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://cars-pfgz.onrender.com/"
+  "proxy": "http://localhost:2010/"
 }
