@@ -9,7 +9,7 @@ export const userlogin = (reqObj) => async dispatch => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    const response = await axios.post('/api/users/login', reqObj);
+    const response = await axios.post('https://trst1.onrender.com/api/users/login', reqObj);
     
     // Save user data to localStorage
     localStorage.setItem("users", JSON.stringify(response.data));
@@ -36,7 +36,7 @@ export const userregister = (reqObj) => async dispatch => {
 
   try {
     
- await axios.post('/api/users/register', reqObj);
+ await axios.post('https://trst1.onrender.com/api/users/register', reqObj);
 
       toast.success("register successfully")
     
