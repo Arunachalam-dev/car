@@ -26,7 +26,11 @@ app.use('/api/bookings',require('./Routers/bookingrouter'))
 process.on('uncaughtException', err => {
   console.error('Uncaught Exception:', err.stack || err.message);
 });
-
+app.use(cors({
+  origin: 'http://localhost:3000', // Replace with your frontend's origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.get('/', (req, res) => {
   res.send("hello");
 });
