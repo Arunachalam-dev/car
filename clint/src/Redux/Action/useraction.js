@@ -40,7 +40,7 @@ export const userregister = (reqObj) => async dispatch => {
   try {
     
 
- await API.post('/api/users/login', reqObj);
+ await API.post('/api/users/register', reqObj);
 
 
 
