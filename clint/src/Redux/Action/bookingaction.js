@@ -8,7 +8,7 @@ export const bookcars=(reqObj)=>async dispatch=>{
     dispatch({type:'LOADING', payload:true})
 
     try{
-        await API.post('/api/bookings/bookcar',reqObj);
+        API.post('/api/bookings/bookcar',reqObj);
         dispatch({type:'LOADING',payload:false})
         toast.success('Booking successful!',{position:'top-center',className: "foo-bar"});
         setTimeout(()=>{
@@ -27,7 +27,7 @@ export const bookcars=(reqObj)=>async dispatch=>{
 export const getallbooking = (reqObj) => async (dispatch) => {
   dispatch({ type: 'LOADING', payload: true });
   try {
-    const response = await API.get('/api/bookings/getallbookings',reqObj);
+    const response = API.get('/api/bookings/getallbookings',reqObj);
     dispatch({ type: 'GET_ALL_BOOKINGS', payload: response.data });
     dispatch({ type: 'LOADING', payload: false });
   } catch (error) {
