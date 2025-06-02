@@ -1,6 +1,6 @@
 let mongose=require('mongoose')
 function mongoosedb(){
-    mongose.connect('mongodb://localhost:27017/Pit_stop',{useunifiedtopology:true,useNewUrlParser: true})
+    mongose.connect('mongodb+srv://arunachalam997607:Arun9976@cluster0.uddzvex.mongodb.net/Pit_Stop',{useunifiedtopology:true,useNewUrlParser: true})
 
     let connection=mongose.connection;
     connection.on('connected',()=>{
