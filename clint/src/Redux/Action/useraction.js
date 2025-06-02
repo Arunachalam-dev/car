@@ -1,6 +1,5 @@
 import axios from "axios";
 import 'antd/dist/reset.css';
-import API from '../../Api';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,10 +9,8 @@ export const userlogin = (reqObj) => async dispatch => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-
-    const response = API.post('/api/users/login', reqObj);
-
-
+    const response = await axios.post('/api/users/login', reqObj);
+    
     // Save user data to localStorage
     localStorage.setItem("users", JSON.stringify(response.data));
     
@@ -39,11 +36,9 @@ export const userregister = (reqObj) => async dispatch => {
 
   try {
     
+ await axios.post('/api/users/register', reqObj);
 
- await API.post('/api/users/login', reqObj);
-
-
-
+      toast.success("register successfully")
     
 
     dispatch({ type: "LOADING", payload: false });
