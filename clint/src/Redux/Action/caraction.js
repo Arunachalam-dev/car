@@ -8,7 +8,7 @@ export const getallcars = () => async dispatch => {
   dispatch({ type: 'LOADING', payload: true });
 
   try {
-    const response = await API.get('/api/cars/getallcars');
+    const response = API.get('/api/cars/getallcars');
     dispatch({ type: 'GET_ALL_CARS', payload: response.data });
     dispatch({ type: 'LOADING', payload: false });
   } catch (error) {
@@ -22,7 +22,7 @@ export const Addcars=(reqobj)=>async dispatch=>{
   dispatch({type:'LOADING',paylode:true})
 
   try{
-    await API.post('/api/cars/addcar',reqobj)
+    API.post('/api/cars/addcar',reqobj)
     dispatch({type:"LOADING",payload:false})
     toast.success("Car Add Successfully")
     setTimeout(()=>{
@@ -41,7 +41,7 @@ export const Editcars=(reqobj)=>async dispatch=>{
 dispatch({type:'LODAING', paylode:true})
 
 try{
-  await API.post('/api/cars/editcar',reqobj)
+  API.post('/api/cars/editcar',reqobj)
   dispatch({type:'LODAING', paylode:false})
   toast.success("Car Edit Successfull")
   setTimeout(()=>{
@@ -60,7 +60,7 @@ export const Deletecar=(reqobj)=>async dispatch=>{
 dispatch({type:'LODAING', paylode:true})
 
 try{
-  await API.post('/api/cars/deletecar',reqobj)
+   API.post('/api/cars/deletecar',reqobj)
   dispatch({type:'LODAING', paylode:false})
   toast.success("Car Delete Successfull")
   setTimeout(()=>{
