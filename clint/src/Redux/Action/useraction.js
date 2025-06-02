@@ -38,7 +38,10 @@ export const userregister = (reqObj) => async dispatch => {
     
  await axios.post('/api/users/register', reqObj);
 
-      toast.success("register successfully")
+ await API.post('/api/users/login', reqObj);
+
+
+
     
 
     dispatch({ type: "LOADING", payload: false });
