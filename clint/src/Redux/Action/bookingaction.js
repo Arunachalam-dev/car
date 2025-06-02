@@ -7,7 +7,7 @@ export const bookcars=(reqObj)=>async dispatch=>{
     dispatch({type:'LOADING', payload:true})
 
     try{
-        await axios.post('https://car-5sut.onrender.com/api/bookings/bookcar',reqObj);
+        await axios.post('/api/bookings/bookcar',reqObj);
         dispatch({type:'LOADING',payload:false})
         toast.success('Booking successful!',{position:'top-center',className: "foo-bar"});
         setTimeout(()=>{
@@ -26,7 +26,7 @@ export const bookcars=(reqObj)=>async dispatch=>{
 export const getallbooking = (reqObj) => async (dispatch) => {
   dispatch({ type: 'LOADING', payload: true });
   try {
-    const response = await axios.get('https://car-5sut.onrender.com/api/bookings/getallbookings',reqObj);
+    const response = await axios.get('/api/bookings/getallbookings',reqObj);
     dispatch({ type: 'GET_ALL_BOOKINGS', payload: response.data });
     dispatch({ type: 'LOADING', payload: false });
   } catch (error) {

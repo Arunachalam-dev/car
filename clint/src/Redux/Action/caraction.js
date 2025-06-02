@@ -7,7 +7,7 @@ export const getallcars = () => async dispatch => {
   dispatch({ type: 'LOADING', payload: true });
 
   try {
-    const response = await axios.get('https://car-5sut.onrender.com/api/cars/getallcars');
+    const response = await axios.get('/api/cars/getallcars');
     dispatch({ type: 'GET_ALL_CARS', payload: response.data });
     dispatch({ type: 'LOADING', payload: false });
   } catch (error) {
@@ -40,7 +40,7 @@ export const Editcars=(reqobj)=>async dispatch=>{
 dispatch({type:'LODAING', paylode:true})
 
 try{
-  await axios.post('https://car-5sut.onrender.com/api/cars/editcar',reqobj)
+  await axios.post('/api/cars/editcar',reqobj)
   dispatch({type:'LODAING', paylode:false})
   toast.success("Car Edit Successfull")
   setTimeout(()=>{
@@ -59,7 +59,7 @@ export const Deletecar=(reqobj)=>async dispatch=>{
 dispatch({type:'LODAING', paylode:true})
 
 try{
-  await axios.post('https://car-5sut.onrender.com/api/cars/deletecar',reqobj)
+  await axios.post('/api/cars/deletecar',reqobj)
   dispatch({type:'LODAING', paylode:false})
   toast.success("Car Delete Successfull")
   setTimeout(()=>{
