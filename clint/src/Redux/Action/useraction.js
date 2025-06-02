@@ -9,7 +9,9 @@ export const userlogin = (reqObj) => async dispatch => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    const response = await axios.post('https://car-5sut.onrender.com/api/users/login', reqObj);
+    const response = await axios.post('https://car-5sut.onrender.com/api/users/login', reqObj ,{
+  headers: { 'Content-Type': 'application/json' }
+});
     
     // Save user data to localStorage
     localStorage.setItem("users", JSON.stringify(response.data));
