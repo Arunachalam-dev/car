@@ -9,7 +9,7 @@ export const userlogin = (reqObj) => async dispatch => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/users/login`, reqObj);
+    const response = await axios.post('/api/users/login', reqObj);
     
     // Save user data to localStorage
     localStorage.setItem("users", JSON.stringify(response.data));
